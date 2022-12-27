@@ -194,7 +194,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                         skeleton({ width: 'w-28', height: 'h-8' })
                       ) : (
                         <span className="text-base-content opacity-70">
-                          Recent Posts
+                          Recent Notes
                         </span>
                       )}
                     </h5>

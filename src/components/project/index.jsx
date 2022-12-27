@@ -55,7 +55,62 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
   };
 
   const renderProjects = () => {
-    return repo.map((item, index) => (
+    // console.log(repo)
+    // if(repo){
+    //   repo.push(
+    //       {
+    //     html_url: 'https://github.com/nthuSecurity-110/informationSecurity',
+    //     name: '輔助滲透測試半自動化工具',
+    //     description: '大學部專題',
+    //     language: 'Python',
+    //     forks_count: 0,
+    //     stargazers_count: 0,
+    //   },
+    //   {
+      //     html_url: 'https://github.com/jerry20091103/SS_Final_Project_LateKiller',
+      //     name: 'LateKiller',
+      //     description: '一個預防遲到的Android app，並能記錄每個人抵達活動場地的時間',
+      //     language: 'JavaScript',
+      //     forks_count: 0,
+      //     stargazers_count: 0,
+      //   },
+      //   )
+      // }
+      // return repo.map((item, index) => (
+      return [
+      {
+        html_url: 'https://github.com/nthuSecurity-110/informationSecurity',
+        name: '輔助滲透測試半自動化工具',
+        description: '大學部專題，輔助滲透測試進行，將部分步驟儲存以便類似場域重複使用',
+        language: 'Python',
+          forks_count: 0,
+          stargazers_count: 0,
+        },
+        {
+          html_url: 'https://github.com/jerry20091103/SS_Final_Project_LateKiller',
+          name: 'LateKiller',
+          description: '一個預防遲到的Android app，能創建活動，記錄每個人抵達活動場地的時間',
+          language: 'JavaScript',
+          forks_count: 0,
+          stargazers_count: 0,
+        },
+        {
+          html_url: 'https://github.com/jmyapple9/Dcard-comments-crawler',
+          name: 'Decard comments crawler',
+          description: '抓取Dcard上的留言和其資訊，包括第幾位留言、性別與留言者學校等。',
+          language: 'Python',
+          forks_count: 0,
+          stargazers_count: 0,
+        },
+        {
+          html_url: 'https://github.com/jmyapple9/Pymoney',
+          name: 'Pymoney',
+          description: '用Python TKinter GUI設計的記帳軟體，可記錄每筆帳的日期、描述、和刪除紀錄。  ',
+          language: 'Python',
+          forks_count: 0,
+          stargazers_count: 0,
+        },
+      ].map((item,index)=> (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         href={item.html_url}
