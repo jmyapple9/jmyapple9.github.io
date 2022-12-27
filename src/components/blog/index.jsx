@@ -93,85 +93,205 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
   };
 
   const renderArticles = () => {
-    return articles && articles.length ? (
-      articles.slice(0, blog.limit).map((article, index) => (
-        <a
-          className="card shadow-lg compact bg-base-100 cursor-pointer"
-          key={index}
-          href={article.link}
-          onClick={(e) => {
-            e.preventDefault();
+    console.log(articles)
+    return       [
+      {
+        title: '離散數學 Discrete Mathematics',
+        link: 'https://hackmd.io/iccVm7mLRkiXI9Rip1fpIA?view',
+        thumbnail: 'https://www.cheenta.com/wp-content/uploads/2021/01/Pigeonhole-Principle.png',//'https://e7.pngegg.com/pngimages/867/829/png-clipart-graph-coloring-graph-theory-vertex-mathematics-mathematics-angle-triangle.png',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['graph','tree','recursion','number theory'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 高',
+      },
+      {
+        title: '線性代數 Linear Algebra',
+        link: 'https://hackmd.io/Wnlf7olYRSmL4QV2OD_pow?view',
+        thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Matrix_zh-hant.png',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['vector space','matrix', 'Diagonalization', 'SVD'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 高',
+      },
+      {
+        title: '資料結構 Data Structure',
+        link: 'https://hackmd.io/X-mpzRzCTD2DDc6u8NnSlA?view',
+        thumbnail: 'https://cs.lmu.edu/~ray/images/redblacktree.png',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['tree', 'linked list', 'array', 'stack', 'queue'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 高',
+      },
+      {
+        title: '演算法 Algorithm',
+        link: 'https://hackmd.io/6ppgvzYfTvy7pizGknsCMw?view',
+        thumbnail: 'https://www.crio.do/blog/content/images/2022/02/Insertion-sort-example.png',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['sorting', 'minimum spanning tree', 'shortest path', 'NP complete'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 高',
+      },
+      {
+        title: '作業系統 Operating System',
+        link: 'https://hackmd.io/xCyJxt8qRaGJYqntaAf0YQ?view',
+        thumbnail: 'https://runestone.academy/ns/books/published/welcomecs/_images/operating-system-logos.jpg',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['scheduling', 'Synchronization', 'deadlock', 'file system'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 中',
+      },
+      {
+        title: '計算機結構與組織 Computer Architecture',
+        link: 'https://hackmd.io/m-HN_9GrTySMFWJxbtirQw?view',
+        thumbnail: 'https://i.imgur.com/3Hcykql.png',
+        publishedAt: Date.parse('2022-07-01'),
+        categories: ['ALU', 'Memory', 'cache', 'pipeline'],
+        description: '考研時自己整理的Hackmd筆記。完成度: 中',
+      },
+    ].slice(0, blog.limit).map((article, index) => (
+      <a
+        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        key={index}
+        href={article.link}
+        onClick={(e) => {
+          e.preventDefault();
 
-            try {
-              if (googleAnalytics?.id) {
-                ga.event({
-                  action: 'Click Blog Post',
-                  params: {
-                    post: article.title,
-                  },
-                });
-              }
-            } catch (error) {
-              console.error(error);
+          try {
+            if (googleAnalytics?.id) {
+              ga.event({
+                action: 'Click Blog Post',
+                params: {
+                  post: article.title,
+                },
+              });
             }
+          } catch (error) {
+            console.error(error);
+          }
 
-            window?.open(article.link, '_blank');
-          }}
-        >
-          <div className="p-8 h-full w-full">
-            <div className="flex items-center flex-col md:flex-row">
-              <div className="avatar mb-5 md:mb-0 opacity-90">
-                <div className="w-24 h-24 mask mask-squircle">
-                  <LazyImage
-                    src={article.thumbnail}
-                    alt={'thumbnail'}
-                    placeholder={skeleton({
-                      width: 'w-full',
-                      height: 'h-full',
-                      shape: '',
-                    })}
-                  />
-                </div>
+          window?.open(article.link, '_blank');
+        }}
+      >
+        <div className="p-8 h-full w-full">
+          <div className="flex items-center flex-col md:flex-row">
+            <div className="avatar mb-5 md:mb-0 opacity-90">
+              <div className="w-24 h-24 mask mask-squircle">
+                <LazyImage
+                  src={article.thumbnail}
+                  alt={'thumbnail'}
+                  placeholder={skeleton({
+                    width: 'w-full',
+                    height: 'h-full',
+                    shape: '',
+                  })}
+                />
               </div>
-              <div className="w-full">
-                <div className="flex items-start px-4">
-                  <div className="text-center md:text-left w-full">
-                    <h2 className="font-semibold text-base-content opacity-60">
-                      {article.title}
-                    </h2>
-                    <p className="text-base-content opacity-50 text-xs">
-                      {formatDistance(article.publishedAt, new Date(), {
-                        addSuffix: true,
-                      })}
-                    </p>
-                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
-                      {article.description}
-                    </p>
-                    <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
-                      {article.categories.map((category, index2) => (
-                        <div
-                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
-                          key={index2}
-                        >
-                          #{category}
-                        </div>
-                      ))}
-                    </div>
+            </div>
+            <div className="w-full">
+              <div className="flex items-start px-4">
+                <div className="text-center md:text-left w-full">
+                  <h2 className="font-semibold text-base-content opacity-60">
+                    {article.title}
+                  </h2>
+                  <p className="text-base-content opacity-50 text-xs">
+                    {formatDistance(article.publishedAt, new Date(), {
+                      addSuffix: true,
+                    })}
+                  </p>
+                  <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    {article.description}
+                  </p>
+                  <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                    {article.categories.map((category, index2) => (
+                      <div
+                        className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+                        key={index2}
+                      >
+                        #{category}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </a>
-      ))
-    ) : (
-      <div className="text-center mb-6">
-        <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
-        <p className="mt-1 text-sm opacity-50 text-base-content">
-          No recent post
-        </p>
-      </div>
-    );
+        </div>
+      </a>
+    ))
+    // return articles && articles.length ? (
+    //   articles.slice(0, blog.limit).map((article, index) => (
+    //     <a
+    //       className="card shadow-lg compact bg-base-100 cursor-pointer"
+    //       key={index}
+    //       href={article.link}
+    //       onClick={(e) => {
+    //         e.preventDefault();
+
+    //         try {
+    //           if (googleAnalytics?.id) {
+    //             ga.event({
+    //               action: 'Click Blog Post',
+    //               params: {
+    //                 post: article.title,
+    //               },
+    //             });
+    //           }
+    //         } catch (error) {
+    //           console.error(error);
+    //         }
+
+    //         window?.open(article.link, '_blank');
+    //       }}
+    //     >
+    //       <div className="p-8 h-full w-full">
+    //         <div className="flex items-center flex-col md:flex-row">
+    //           <div className="avatar mb-5 md:mb-0 opacity-90">
+    //             <div className="w-24 h-24 mask mask-squircle">
+    //               <LazyImage
+    //                 src={article.thumbnail}
+    //                 alt={'thumbnail'}
+    //                 placeholder={skeleton({
+    //                   width: 'w-full',
+    //                   height: 'h-full',
+    //                   shape: '',
+    //                 })}
+    //               />
+    //             </div>
+    //           </div>
+    //           <div className="w-full">
+    //             <div className="flex items-start px-4">
+    //               <div className="text-center md:text-left w-full">
+    //                 <h2 className="font-semibold text-base-content opacity-60">
+    //                   {article.title}
+    //                 </h2>
+    //                 <p className="text-base-content opacity-50 text-xs">
+    //                   {formatDistance(article.publishedAt, new Date(), {
+    //                     addSuffix: true,
+    //                   })}
+    //                 </p>
+    //                 <p className="mt-3 text-base-content text-opacity-60 text-sm">
+    //                   {article.description}
+    //                 </p>
+    //                 <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+    //                   {article.categories.map((category, index2) => (
+    //                     <div
+    //                       className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+    //                       key={index2}
+    //                     >
+    //                       #{category}
+    //                     </div>
+    //                   ))}
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </a>
+    //   ))
+    // ) : (
+    //   <div className="text-center mb-6">
+    //     <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
+    //     <p className="mt-1 text-sm opacity-50 text-base-content">
+    //       No recent post
+    //     </p>
+    //   </div>
+    // );
   };
 
   return (

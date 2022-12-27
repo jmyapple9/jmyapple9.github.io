@@ -55,27 +55,6 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
   };
 
   const renderProjects = () => {
-    // console.log(repo)
-    // if(repo){
-    //   repo.push(
-    //       {
-    //     html_url: 'https://github.com/nthuSecurity-110/informationSecurity',
-    //     name: '輔助滲透測試半自動化工具',
-    //     description: '大學部專題',
-    //     language: 'Python',
-    //     forks_count: 0,
-    //     stargazers_count: 0,
-    //   },
-    //   {
-      //     html_url: 'https://github.com/jerry20091103/SS_Final_Project_LateKiller',
-      //     name: 'LateKiller',
-      //     description: '一個預防遲到的Android app，並能記錄每個人抵達活動場地的時間',
-      //     language: 'JavaScript',
-      //     forks_count: 0,
-      //     stargazers_count: 0,
-      //   },
-      //   )
-      // }
       // return repo.map((item, index) => (
       return [
       {
