@@ -97,7 +97,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
     return       [
       {
         title: '離散數學 Discrete Mathematics',
-        link: 'https://hackmd.io/iccVm7mLRkiXI9Rip1fpIA?view',
+        link: 'https://hackmd.io/@jmyapple9/Discrete_mathematics',
         thumbnail: 'https://www.cheenta.com/wp-content/uploads/2021/01/Pigeonhole-Principle.png',//'https://e7.pngegg.com/pngimages/867/829/png-clipart-graph-coloring-graph-theory-vertex-mathematics-mathematics-angle-triangle.png',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['graph','tree','recursion','number theory'],
@@ -105,7 +105,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       },
       {
         title: '線性代數 Linear Algebra',
-        link: 'https://hackmd.io/Wnlf7olYRSmL4QV2OD_pow?view',
+        link: 'https://hackmd.io/@jmyapple9/Linear_algebra',
         thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Matrix_zh-hant.png',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['vector space','matrix', 'Diagonalization', 'SVD'],
@@ -113,7 +113,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       },
       {
         title: '資料結構 Data Structure',
-        link: 'https://hackmd.io/X-mpzRzCTD2DDc6u8NnSlA?view',
+        link: 'https://hackmd.io/@jmyapple9/Data_structure',
         thumbnail: 'https://cs.lmu.edu/~ray/images/redblacktree.png',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['tree', 'linked list', 'array', 'stack', 'queue'],
@@ -121,7 +121,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       },
       {
         title: '演算法 Algorithm',
-        link: 'https://hackmd.io/6ppgvzYfTvy7pizGknsCMw?view',
+        link: 'https://hackmd.io/@jmyapple9/Algorithm',
         thumbnail: 'https://www.crio.do/blog/content/images/2022/02/Insertion-sort-example.png',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['sorting', 'minimum spanning tree', 'shortest path', 'NP complete'],
@@ -129,7 +129,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       },
       {
         title: '作業系統 Operating System',
-        link: 'https://hackmd.io/xCyJxt8qRaGJYqntaAf0YQ?view',
+        link: 'https://hackmd.io/@jmyapple9/Operating_system',
         thumbnail: 'https://runestone.academy/ns/books/published/welcomecs/_images/operating-system-logos.jpg',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['scheduling', 'Synchronization', 'deadlock', 'file system'],
@@ -137,7 +137,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       },
       {
         title: '計算機結構與組織 Computer Architecture',
-        link: 'https://hackmd.io/m-HN_9GrTySMFWJxbtirQw?view',
+        link: 'https://hackmd.io/@jmyapple9/Computer_architecture',
         thumbnail: 'https://i.imgur.com/3Hcykql.png',
         publishedAt: Date.parse('2022-07-01'),
         categories: ['ALU', 'Memory', 'cache', 'pipeline'],
