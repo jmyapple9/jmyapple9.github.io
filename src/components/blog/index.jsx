@@ -93,7 +93,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
   };
 
   const renderArticles = () => {
-    console.log(articles)
+    // console.log(articles)
     return       [
       {
         title: '離散數學 Discrete Mathematics',
@@ -308,7 +308,9 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                 }`}
               >
                 <div className="card-body">
-                  <div className="mx-3 mb-2">
+                  {/* <div className="mx-3 mb-2"> */}
+                <div className="mx-3 flex items-center justify-between mb-2">
+
                     <h5 className="card-title">
                       {loading ? (
                         skeleton({ width: 'w-28', height: 'h-8' })
@@ -318,6 +320,26 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                         </span>
                       )}
                     </h5>
+                    {/* <a
+                      href={`https://hackmd.io/@jmyapple9`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-base-content opacity-50"
+                    >
+                      See All
+                    </a> */}
+                    {loading ? (
+                    skeleton({ width: 'w-10', height: 'h-5' })
+                  ) : (
+                    <a
+                      href={`https://hackmd.io/@jmyapple9`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-base-content opacity-50"
+                    >
+                      See All
+                    </a>
+                  )}
                   </div>
                   <div className="col-span-2">
                     <div className="grid grid-cols-1 gap-6">
