@@ -26,7 +26,8 @@ const config = {
   },
   resume: {
     fileUrl:
-      'about:blank', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/uc?id=1h6J3FxeHNsqdTipvc4hhFRgU3hWS0OSh&export=download',
+      // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'C',
