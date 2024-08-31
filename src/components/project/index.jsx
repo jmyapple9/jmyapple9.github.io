@@ -202,7 +202,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                     skeleton({ width: 'w-10', height: 'h-5' })
                   ) : (
                     <a
-                      href={`https://github.com/${github.username}?tab=repositories`}
+                      href={`https://github.com/${github.username}`}
                       target="_blank"
                       rel="noreferrer"
                       className="text-base-content opacity-50"
