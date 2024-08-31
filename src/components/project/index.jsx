@@ -60,7 +60,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       {
         html_url: 'https://github.com/jmyapple9/CS6135-PDA-VLSI-hw1',
         name: 'Place and Route Tool (PDA HW1)',
-        description: 'Implemented the Fiduccia–Mattheyses algorithm to partition cells into two groups for different die technologies, ensuring the area utilization constraint of each die is not violated.',
+        description: 'Completed the P&R flow using Cadence Innovus for a given synthesized standard-cell design while optimizing timing, chip area, and total wirelength without violating any DRC constraints.',
         language: 'C++',
           forks_count: 0,
           stargazers_count: 0,
@@ -98,9 +98,9 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
             stargazers_count: 0,
         },
         {
-          html_url: 'https://github.com/jmyapple9/Pymoney',
-          name: 'Pymoney',
-          description: 'A bookkeeping software designed with Python Tkinter GUI that can record the date, description, and delete records for each entry.',
+          html_url: 'https://github.com/jmyapple9/nthu-course-filter',
+          name: 'NTHU Course Filter',
+          description: 'This custom Tkinter GUI app uses a web crawler to get course info for NTHU\'s 113th semester, allowing users to easily filter courses by department, location, and schedule.',
           language: 'Python',
           forks_count: 0,
           stargazers_count: 0,
