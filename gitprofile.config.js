@@ -26,7 +26,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://drive.google.com/uc?id=1h6J3FxeHNsqdTipvc4hhFRgU3hWS0OSh&export=download',
+      'https://drive.usercontent.google.com/uc?id=10dvxZW-o7C3K7WbMlIAVkIKQq_JYGR4g&export=download',
       // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
@@ -43,7 +43,8 @@ const config = {
     'Android-studio',
     'Vivado',
     'VMware',
-    'Machine-Learning',
+    'Deep-Learning',
+    'Heuristic-Algorithm',
     // 'PHPUnit',
     // 'CSS',
     // 'Antd',
