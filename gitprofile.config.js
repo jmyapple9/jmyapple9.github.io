@@ -76,15 +76,15 @@ const config = {
   education: [
     {
       institution: 'National Tsing Hua University',
-      degree: 'Bachelor in Computer Science',
-      from: '2019',
-      to: '2023',
-    },
-    {
-      institution: 'National Tsing Hua University',
       degree: 'Master in Institute of Information Systems and Applications',
       from: '2023',
       to: '2025 (Expected)',
+    },
+    {
+      institution: 'National Tsing Hua University',
+      degree: 'Bachelor in Computer Science',
+      from: '2019',
+      to: '2023',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
