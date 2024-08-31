@@ -75,17 +75,17 @@ const config = {
   ], */
   education: [
     {
-      institution: '國立清華大學 National Tsing Hua University',
-      degree: 'Bachelor',
+      institution: 'National Tsing Hua University',
+      degree: 'Bachelor in Computer Science',
       from: '2019',
       to: '2023',
     },
-    // {
-    //   institution: 'Institution Name',
-    //   degree: 'Degree',
-    //   from: '2012',
-    //   to: '2014',
-    // },
+    {
+      institution: 'National Tsing Hua University',
+      degree: 'Master in Institute of Information Systems and Applications',
+      from: '2023',
+      to: '2025 (Expected)',
+    },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
