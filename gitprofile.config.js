@@ -26,7 +26,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://drive.usercontent.google.com/uc?id=10dvxZW-o7C3K7WbMlIAVkIKQq_JYGR4g&export=download',
+      'https://drive.usercontent.google.com/uc?id=1C4y1KBEGzC_kUaCVOM2SE7cFPjpKvhMG&export=download',
       // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
